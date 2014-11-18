@@ -1,0 +1,69 @@
+<!doctype html>
+<title>Element Queries with Hitch.js</title>
+<style data-hitch-interpret="true">
+@-hitch-requires ../hitch-element-queries.js;
+
+body { font: 100%/1.5 "Helvetica Neue", sans-serif; margin: 1.5em; }
+
+h1 { font-size: 300%; margin: 0; }
+
+p { max-width: 30em; }
+
+em { font-weight: 700; }
+
+.class { color: #2A2; }
+.suffix { color: #C00; }
+.key { color: #68D; }
+.value { color: #33F; }
+
+.outer, .inner { border-radius: 1em; height: 2em; overflow: hidden; position: relative; }
+
+.outer { background: #DDD; margin-bottom: .75em; }
+
+.inner-bar { background: limegreen; }
+.inner-bar:max-width(30rem) { background-color: royalblue; }
+.inner-bar:min-width(60rem) { background-color: red; }
+
+.legend { position: absolute; }
+.legend--1 { background: red; width: 100%; }
+.legend--2 { background: limegreen; width: 60rem; }
+.legend--3 { background: royalblue; width: 30rem; }
+
+.inner-bar { position: relative; }
+.inner-bar--1 { width: 20%; }
+.inner-bar--2 { width: 40%; }
+.inner-bar--3 { width: 60%; }
+.inner-bar--4 { width: 80%; }
+</style>
+
+<script src="../lib/hitch-0.6.3.min.js"></script>
+
+<h1>Element Queries with Hitch.js</h1>
+
+<p>Element Queries are a way for you to style something based on its measurements. Where Media Queries care about the size of the <em>screen</em>, Element Queries care about the size of the <em>thing</em>.</p>
+
+<pre><span class="class">.inner-bar</span> { <span class="key">background</span>: <span class="value">limegreen</span>; }
+<span class="class">.inner-bar:max-width</span>(<span class="value">30</span><span class="suffix">rem</span>) { <span class="key">background-color</span>: <span class="value">royalblue</span>; }
+<span class="class">.inner-bar:min-width</span>(<span class="value">60</span><span class="suffix">rem</span>) { <span class="key">background-color</span>: <span class="value">red</span>; }</pre>
+
+<div class="outer outer--bar">
+	<div class="inner inner-bar inner-bar--1"></div>
+</div>
+
+<div class="outer outer--bar">
+	<div class="inner inner-bar inner-bar--2"></div>
+</div>
+
+<div class="outer outer--bar">
+	<div class="inner inner-bar inner-bar--3"></div>
+</div>
+
+<div class="outer outer--bar">
+	<div class="inner inner-bar inner-bar--4"></div>
+</div>
+
+<div class="outer outer--legend">
+	<div class="inner legend legend--1"></div>
+	<div class="inner legend legend--2"></div>
+	<div class="inner legend legend--3"></div>
+</div>
