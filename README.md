@@ -1,6 +1,6 @@
 # Hitch Element Queries
 
-Element queries allow developers style elements based on their own measurements. [Hitch.js](https://github.com/jonathantneal/Hitch) is used to enable these features in CSS.
+Element queries are a yet-proposed CSS module that allow developers to style elements based on their size and shape. [Hitch.js](https://github.com/jonathantneal/Hitch) is used to enable these features in CSS.
 
 ## Syntax
 
@@ -12,7 +12,7 @@ Syntactically, element query features resemble CSS pseudo classes: they consist 
 
 ## Features
 
-Element queries let the presentation of content be tailored to a wide range of viewing experiences without having to change the content itself.
+Element queries allow content to adapt to a wide range of viewing experiences, such as width, height, aspect ratio, and orientation, all without having to change the content itself.
 
 ## Width
 
